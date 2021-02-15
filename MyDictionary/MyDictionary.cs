@@ -4,23 +4,23 @@ using System.Text;
 
 namespace MyDictionary
 {
-    class MyDictionary<K, V>
+    class MyDictionary<T1, T2>
     {
-        K[] keys;
-        V[] values;
+        T1[] keys;
+        T2[] values;
         public MyDictionary()
         {
-            keys = new K[0];
-            values = new V[0];
+            keys = new T1[0];
+            values = new T2[0];
         }
 
-        public void Add(K key, V value)
+        public void Add(T1 key, T2 value)
         {
-            K[] tempKey = keys;
-            V[] tempValue = values;
+            T1[] tempKey = keys;
+            T2[] tempValue = values;
 
-            keys = new K[keys.Length + 1];
-            values = new V[values.Length + 1];
+            keys = new T1[keys.Length + 1];
+            values = new T2[values.Length + 1];
 
             for (int i = 0; i < tempValue.Length; i++)
             {
